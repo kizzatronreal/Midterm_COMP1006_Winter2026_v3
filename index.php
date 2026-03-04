@@ -1,34 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Book Review Submission</title>
-</head>
-<body>
+<?php require "includes/header.php"; ?>
 
     <h1>Submit a Book Review</h1>
 
     <form action="process.php" method="POST">
 
-        <label for="title">Book Title:</label>
-        <input type="text" id="title" name="title">
+        <div class="form-group">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" name="title" required>
+        </div>
 
-        <label for="author">Author:</label>
-        <input type="text" id="author" name="author">
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" required>
+        </div>
 
-        <label for="rating">Rating (1 to 5):</label>
-        <input type="number" id="rating" name="rating" min="1" max="5">
+        <div class="form-group">
+            <label for="rating">Rating (1 to 5)</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+        </div>
 
-        <label for="review_text">Review:</label>
-        <textarea id="review_text" name="review_text" rows="6" cols="40"></textarea>
+        <div class="form-group">
+            <label for="review_text">Review</label>
+            <textarea id="review_text" name="review_text" rows="6" required></textarea>
+        </div>
 
         <button type="submit">Submit Review</button>
 
     </form>
 
-    <p>
-        <a href="admin.php">Go to Admin Page</a>
-    </p>
-
-</body>
-</html>
+<?php require "includes/footer.php"; ?>
